@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 115fa52680929ee47a6f9a05297f7242
+timeCreated: 1507350701
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - Snowball: {fileID: 1844599395874520, guid: df151bc3a1c55ec4f9fcee21ee70f589, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
