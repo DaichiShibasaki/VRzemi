@@ -46,14 +46,16 @@ public class Arrowtest : MonoBehaviour {
         if ( joint ) {
             Vector3 scale = joint.transform.localScale;
             scale.x = length;
+            scale.y = 0.1f;
             scale.z = length;
             joint.transform.localScale = scale;
 
+            //transform.LookAt(bow.transform.position);
+            
             Vector3 pos = joint.transform.position;
             pos.x = bow.transform.position.x - ( distance.x / 2 );
             pos.z = bow.transform.position.z - ( distance.z / 2 );
             joint.transform.position = pos;
         }
-	}
-
+	}    
 }
