@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NetworkMgr : MonoBehaviour {
     public GameObject objectPrefab;
-    string ip = "172.18.10.127";
+    string ip = "172.18.10.129";
     string port = "1192";
     bool connected = false;
 

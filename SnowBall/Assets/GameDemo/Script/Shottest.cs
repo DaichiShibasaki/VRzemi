@@ -7,6 +7,7 @@ public class Shottest : MonoBehaviour {
 	public GameObject prefab;
 	public Rigidbody attachPoint;
     public Transform Backward;
+	[SerializeField] float _speed = 100;
 	SteamVR_TrackedObject trackedObj;
 	FixedJoint joint;
 
@@ -40,7 +41,7 @@ public class Shottest : MonoBehaviour {
 
             Vector3 forward = attachPoint.transform.position - Backward.position;
 
-			rigidbody.velocity = forward * 100;
+			rigidbody.velocity = forward * _speed;
 
 			rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
         }

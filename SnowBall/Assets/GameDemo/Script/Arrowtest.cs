@@ -6,7 +6,7 @@ public class Arrowtest : MonoBehaviour {
 
     [SerializeField] SteamVR_TrackedObject bow; //Controller (left)
     [SerializeField] SteamVR_TrackedObject arrow; //Controller (right)
-    
+    [SerializeField] float _speed = 100;
 	public GameObject prefab;
 	public Rigidbody attachPoint;
     public Transform Backward;
@@ -22,7 +22,7 @@ public class Arrowtest : MonoBehaviour {
 		var device = SteamVR_Controller.Input((int)arrow.index);
         Vector3 distance = bow.transform.position - arrow.transform.position;
         float length = distance.magnitude;
-		if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && length < 0.1f)
+		if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && length < 0.2f)
 		{
 			var go = GameObject.Instantiate(prefab);
 			go.transform.position = attachPoint.transform.position;
@@ -30,7 +30,7 @@ public class Arrowtest : MonoBehaviour {
 			joint = go.AddComponent<FixedJoint>();
 			joint.connectedBody = attachPoint;
 		}
-		else if (joint != null && device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
+		if (joint != null && device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
 		{
 			var go = joint.gameObject;
 			var rigidbody = go.GetComponent<Rigidbody>();
@@ -38,23 +38,27 @@ public class Arrowtest : MonoBehaviour {
 			joint = null;
 			Object.Destroy(go, 15.0f);
             
-			rigidbody.velocity = distance.normalized * ( ( distance.magnitude / 10 ) * 100 );
+			rigidbody.velocity = distance.normalized * ( ( distance.magnitude / 10 ) * _speed );
 
 			//rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
         }
 
         if ( joint ) {
             Vector3 scale = joint.transform.localScale;
-            scale.x = length;
-            scale.y = 0.1f;
-            scale.z = length;
-            joint.transform.localScale = scale;
+            scale.x = 0.1f;
+            scale.y = length;
+            scale.z = 0.1f;
+			joint.transform.localScale = scale;
 
-            //transform.LookAt(bow.transform.position);
+			Vector3 dir = Vector3.Cross(Vector3.up, distance).normalized;
+			float dot = Vector3.Dot(Vector3.up, distance);
+			float radian = Mathf.Acos(dot);
+			Quaternion q = Quaternion.AxisAngle(dir, radian);
+
+			joint.transform.rotation = q;
             
             Vector3 pos = joint.transform.position;
-            pos.x = bow.transform.position.x - ( distance.x / 2 );
-            pos.z = bow.transform.position.z - ( distance.z / 2 );
+			pos = bow.transform.position - ( distance / 2 );
             joint.transform.position = pos;
         }
 	}    
