@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Arrowtest : MonoBehaviour {
 
@@ -30,36 +31,27 @@ public class Arrowtest : MonoBehaviour {
 			joint = go.AddComponent<FixedJoint>();
 			joint.connectedBody = attachPoint;
 		}
-		if (joint != null && device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
+
+		if (joint)
 		{
-			var go = joint.gameObject;
-			var rigidbody = go.GetComponent<Rigidbody>();
-			Object.DestroyImmediate(joint);
-			joint = null;
-			Object.Destroy(go, 15.0f);
-            
-			rigidbody.velocity = distance.normalized * ( ( distance.magnitude / 10 ) * _speed );
-
-			//rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
-        }
-
-        if ( joint ) {
-            Vector3 scale = joint.transform.localScale;
-            scale.x = 0.1f;
-            scale.y = length;
-            scale.z = 0.1f;
-			joint.transform.localScale = scale;
-
 			Vector3 dir = Vector3.Cross(Vector3.up, distance).normalized;
-			float dot = Vector3.Dot(Vector3.up, distance);
-			float radian = Mathf.Acos(dot);
-			Quaternion q = Quaternion.AxisAngle(dir, radian);
-
+			float angle = Mathf.Acos(Vector3.Dot(Vector3.up, distance));
+			Quaternion q = Quaternion.AxisAngle(dir, angle);
+			Vector3 scale = new Vector3(0.1f, length * 0.5f, 0.1f);
+			
 			joint.transform.rotation = q;
-            
-            Vector3 pos = joint.transform.position;
-			pos = bow.transform.position - ( distance / 2 );
-            joint.transform.position = pos;
-        }
+			joint.transform.localScale = scale;
+			joint.transform.position = ( bow.transform.position + arrow.transform.position ) / 2;
+			
+			if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
+			{
+				var go = joint.gameObject;
+				var rigidbody = go.GetComponent<Rigidbody>();
+				Object.DestroyImmediate(joint);
+				joint = null;
+				Object.Destroy(go, 15.0f);
+				rigidbody.velocity = distance.normalized * _speed;
+			}
+		}
 	}    
 }
