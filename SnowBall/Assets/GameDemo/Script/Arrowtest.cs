@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Arrowtest : MonoBehaviour {
 
-    [SerializeField] SteamVR_TrackedObject bow; //Controller (left)
+    [SerializeField] Transform left; //Controller (left)
+    [SerializeField] Transform right; //Controller (right)
     [SerializeField] SteamVR_TrackedObject arrow; //Controller (right)
     [SerializeField] float _speed = 100;
 	public GameObject prefab;
 	public Rigidbody attachPoint;
-    public Transform Backward;
 	FixedJoint joint;
     
 	// Use this for initialization
@@ -20,7 +20,7 @@ public class Arrowtest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		var device = SteamVR_Controller.Input((int)arrow.index);
-        Vector3 distance = bow.transform.position - arrow.transform.position;
+        Vector3 distance = right.position - left.position;
         float length = distance.magnitude;
 		if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && length < 0.2f)
 		{
@@ -40,7 +40,7 @@ public class Arrowtest : MonoBehaviour {
 			
 			joint.transform.rotation = q;
 			joint.transform.localScale = scale;
-			joint.transform.position = ( bow.transform.position + arrow.transform.position ) / 2;
+			joint.transform.position = ( left.position + right.position ) / 2;
 			
 			if (device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
 			{

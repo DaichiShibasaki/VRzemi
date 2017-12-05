@@ -1,0 +1,415 @@
+fileFormatVersion: 2
+guid: 92dc649f270109340bd583a30b33ea5a
+timeCreated: 1511922852
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: doctor_belt1
+    100004: doctor_belt1_ring
+    100006: doctor_belt2
+    100008: doctor_belt2_ring
+    100010: doctor_belt2_tie
+    100012: doctor_body
+    100014: doctor_coat
+    100016: doctor_eye_L
+    100018: doctor_eye_R
+    100020: doctor_hand_L
+    100022: doctor_hand_R
+    100024: doctor_hat
+    100026: doctor_jiandai1
+    100028: doctor_jiandai2
+    100030: doctor_lingdai
+    100032: doctor_lingzi_L
+    100034: doctor_lingzi_R
+    100036: doctor_maozhao
+    100038: doctor_mask
+    100040: doctor_mouth
+    100042: doctor_scissors1
+    100044: doctor_scissors2
+    100046: headset_main
+    100048: headset_tube1
+    100050: headset_tube2
+    100052: tube2_main
+    100054: tube2_ring1
+    100056: tube2_ring2
+    100058: tube2_ring3
+    100060: tube_main
+    100062: tube_ring1
+    100064: tube_ring2
+    100066: tube_ring3
+    400000: //RootNode
+    400002: doctor_belt1
+    400004: doctor_belt1_ring
+    400006: doctor_belt2
+    400008: doctor_belt2_ring
+    400010: doctor_belt2_tie
+    400012: doctor_body
+    400014: doctor_coat
+    400016: doctor_eye_L
+    400018: doctor_eye_R
+    400020: doctor_hand_L
+    400022: doctor_hand_R
+    400024: doctor_hat
+    400026: doctor_jiandai1
+    400028: doctor_jiandai2
+    400030: doctor_lingdai
+    400032: doctor_lingzi_L
+    400034: doctor_lingzi_R
+    400036: doctor_maozhao
+    400038: doctor_mask
+    400040: doctor_mouth
+    400042: doctor_scissors1
+    400044: doctor_scissors2
+    400046: headset_main
+    400048: headset_tube1
+    400050: headset_tube2
+    400052: tube2_main
+    400054: tube2_ring1
+    400056: tube2_ring2
+    400058: tube2_ring3
+    400060: tube_main
+    400062: tube_ring1
+    400064: tube_ring2
+    400066: tube_ring3
+    2300000: doctor_belt1
+    2300002: doctor_belt1_ring
+    2300004: doctor_belt2
+    2300006: doctor_belt2_ring
+    2300008: doctor_belt2_tie
+    2300010: doctor_body
+    2300012: doctor_coat
+    2300014: doctor_eye_L
+    2300016: doctor_eye_R
+    2300018: doctor_hand_L
+    2300020: doctor_hand_R
+    2300022: doctor_hat
+    2300024: doctor_jiandai1
+    2300026: doctor_jiandai2
+    2300028: doctor_lingdai
+    2300030: doctor_lingzi_L
+    2300032: doctor_lingzi_R
+    2300034: doctor_maozhao
+    2300036: doctor_mask
+    2300038: doctor_mouth
+    2300040: doctor_scissors1
+    2300042: doctor_scissors2
+    2300044: headset_main
+    2300046: headset_tube1
+    2300048: headset_tube2
+    2300050: tube2_main
+    2300052: tube2_ring1
+    2300054: tube2_ring2
+    2300056: tube2_ring3
+    2300058: tube_main
+    2300060: tube_ring1
+    2300062: tube_ring2
+    2300064: tube_ring3
+    3300000: doctor_belt1
+    3300002: doctor_belt1_ring
+    3300004: doctor_belt2
+    3300006: doctor_belt2_ring
+    3300008: doctor_belt2_tie
+    3300010: doctor_body
+    3300012: doctor_coat
+    3300014: doctor_eye_L
+    3300016: doctor_eye_R
+    3300018: doctor_hand_L
+    3300020: doctor_hand_R
+    3300022: doctor_hat
+    3300024: doctor_jiandai1
+    3300026: doctor_jiandai2
+    3300028: doctor_lingdai
+    3300030: doctor_lingzi_L
+    3300032: doctor_lingzi_R
+    3300034: doctor_maozhao
+    3300036: doctor_mask
+    3300038: doctor_mouth
+    3300040: doctor_scissors1
+    3300042: doctor_scissors2
+    3300044: headset_main
+    3300046: headset_tube1
+    3300048: headset_tube2
+    3300050: tube2_main
+    3300052: tube2_ring1
+    3300054: tube2_ring2
+    3300056: tube2_ring3
+    3300058: tube_main
+    3300060: tube_ring1
+    3300062: tube_ring2
+    3300064: tube_ring3
+    4300000: doctor_belt1
+    4300002: doctor_belt1_ring
+    4300004: doctor_lingzi_R
+    4300006: doctor_lingzi_L
+    4300008: doctor_lingdai
+    4300010: doctor_jiandai1
+    4300012: doctor_jiandai2
+    4300014: doctor_belt2_tie
+    4300016: doctor_belt2
+    4300018: doctor_belt2_ring
+    4300020: doctor_scissors1
+    4300022: doctor_scissors2
+    4300024: tube2_main
+    4300026: tube2_ring1
+    4300028: tube2_ring2
+    4300030: tube2_ring3
+    4300032: headset_main
+    4300034: headset_tube1
+    4300036: headset_tube2
+    4300038: tube_ring1
+    4300040: tube_ring2
+    4300042: tube_ring3
+    4300044: tube_main
+    4300046: doctor_hand_R
+    4300048: doctor_hand_L
+    4300050: doctor_mouth
+    4300052: doctor_mask
+    4300054: doctor_coat
+    4300056: doctor_eye_R
+    4300058: doctor_eye_L
+    4300060: doctor_hat
+    4300062: doctor_maozhao
+    4300064: doctor_body
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: doctor(Clone)
+      parentName: 
+      position: {x: -0, y: -0.005380933, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_belt1
+      parentName: doctor(Clone)
+      position: {x: -0, y: 0.9996278, z: -0.056209903}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_belt1_ring
+      parentName: doctor(Clone)
+      position: {x: -0.020284303, y: 0.9889031, z: 0.06162477}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_belt2
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_belt2_ring
+      parentName: doctor(Clone)
+      position: {x: -0, y: 1.0398872, z: 0.09290288}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_belt2_tie
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_body
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_coat
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_eye_L
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_eye_R
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_hand_L
+      parentName: doctor(Clone)
+      position: {x: -1.2079227e-15, y: 1.1417514, z: -0.029920226}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_hand_R
+      parentName: doctor(Clone)
+      position: {x: -1.2079227e-15, y: 1.1417514, z: -0.029920226}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_hat
+      parentName: doctor(Clone)
+      position: {x: -0.000000041723528, y: 1.690331, z: -0.12482504}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_jiandai1
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_jiandai2
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_lingdai
+      parentName: doctor(Clone)
+      position: {x: 0.000044667642, y: 1.2020468, z: 0.06951824}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_lingzi_L
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_lingzi_R
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_maozhao
+      parentName: doctor(Clone)
+      position: {x: -0, y: 1.533244, z: -0.100497514}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_mask
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_mouth
+      parentName: doctor(Clone)
+      position: {x: -0, y: -0.24196985, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_scissors1
+      parentName: doctor(Clone)
+      position: {x: 0.15000631, y: 1.0242327, z: -0.0015687661}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: doctor_scissors2
+      parentName: doctor(Clone)
+      position: {x: 0.13688709, y: 1.0244128, z: 0.038577493}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: headset_main
+      parentName: doctor(Clone)
+      position: {x: -0.20882575, y: 0.91926646, z: 0.07323994}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: headset_tube1
+      parentName: doctor(Clone)
+      position: {x: -0.26688668, y: 0.6994267, z: -0.13735579}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: headset_tube2
+      parentName: doctor(Clone)
+      position: {x: -0.16023144, y: 0.9730034, z: -0.16349214}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube2_main
+      parentName: doctor(Clone)
+      position: {x: 0.18074375, y: 0.9427625, z: -0.037828367}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube2_ring1
+      parentName: doctor(Clone)
+      position: {x: 0.16589418, y: 0.985669, z: -0.014696873}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube2_ring2
+      parentName: doctor(Clone)
+      position: {x: 0.16638623, y: 0.9839931, z: -0.062491357}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube2_ring3
+      parentName: doctor(Clone)
+      position: {x: 0.15283689, y: 1.0231438, z: -0.04119649}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube_main
+      parentName: doctor(Clone)
+      position: {x: -0.1874966, y: 0.92241305, z: -0.05419219}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube_ring1
+      parentName: doctor(Clone)
+      position: {x: -0.17416991, y: 0.9697424, z: -0.026415441}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube_ring2
+      parentName: doctor(Clone)
+      position: {x: -0.17200668, y: 0.96946806, z: -0.07937494}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tube_ring3
+      parentName: doctor(Clone)
+      position: {x: -0.15985733, y: 1.0126481, z: -0.053821445}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

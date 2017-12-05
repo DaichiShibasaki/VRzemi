@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: f8b6adcf7c078a743b601350a0a6f59f
+timeCreated: 1511921088
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: knight_mesh_001
+    100004: knight_mesh_0010
+    100006: knight_mesh_002
+    100008: knight_mesh_003
+    100010: knight_mesh_004
+    100012: knight_mesh_006
+    100014: knight_mesh_007
+    100016: knight_mesh_008
+    100018: knight_mesh_009
+    100020: knight_mesh_010
+    100022: knight_mesh_011
+    100024: knight_mesh_012
+    400000: //RootNode
+    400002: knight_mesh_001
+    400004: knight_mesh_0010
+    400006: knight_mesh_002
+    400008: knight_mesh_003
+    400010: knight_mesh_004
+    400012: knight_mesh_006
+    400014: knight_mesh_007
+    400016: knight_mesh_008
+    400018: knight_mesh_009
+    400020: knight_mesh_010
+    400022: knight_mesh_011
+    400024: knight_mesh_012
+    2300000: knight_mesh_001
+    2300002: knight_mesh_0010
+    2300004: knight_mesh_002
+    2300006: knight_mesh_003
+    2300008: knight_mesh_004
+    2300010: knight_mesh_006
+    2300012: knight_mesh_007
+    2300014: knight_mesh_008
+    2300016: knight_mesh_009
+    2300018: knight_mesh_010
+    2300020: knight_mesh_011
+    2300022: knight_mesh_012
+    3300000: knight_mesh_001
+    3300002: knight_mesh_0010
+    3300004: knight_mesh_002
+    3300006: knight_mesh_003
+    3300008: knight_mesh_004
+    3300010: knight_mesh_006
+    3300012: knight_mesh_007
+    3300014: knight_mesh_008
+    3300016: knight_mesh_009
+    3300018: knight_mesh_010
+    3300020: knight_mesh_011
+    3300022: knight_mesh_012
+    4300000: knight_mesh_001
+    4300002: knight_mesh_002
+    4300004: knight_mesh_003
+    4300006: knight_mesh_004
+    4300008: knight_mesh_006
+    4300010: knight_mesh_007
+    4300012: knight_mesh_008
+    4300014: knight_mesh_009
+    4300016: knight_mesh_0010
+    4300018: knight_mesh_010
+    4300020: knight_mesh_011
+    4300022: knight_mesh_012
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton:
+    - name: knight(Clone)
+      parentName: 
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_001
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_002
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_003
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_004
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_006
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_007
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_008
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_009
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_010
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_011
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: knight_mesh_012
+      parentName: knight(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
