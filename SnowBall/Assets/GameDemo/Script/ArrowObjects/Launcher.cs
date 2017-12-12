@@ -27,7 +27,8 @@ public class Launcher : MonoBehaviour {
 			GameObject arrow = Instantiate( _arrow, transform.position + new Vector3( 0, 0.5f, 0 ), new Quaternion( 0, 0, 0, 0 ) );
 			arrow.AddComponent<Rigidbody>( );
 			arrow.AddComponent<Arrow>( );
-			arrow.GetComponent<Arrow>( ).setDirection( q, ahead, _arrow_speed );
+			arrow.GetComponent<Rigidbody> ().velocity = ahead.normalized * _arrow_speed;
+			Destroy( arrow, 10.0f );
 		}
 		_time = ( _time + 1 ) % _interval;
 	}

@@ -46,6 +46,7 @@ public class Arrowtest : MonoBehaviour {
 			{
 				var go = joint.gameObject;
 				var rigidbody = go.GetComponent<Rigidbody>();
+				go.AddComponent<Arrow> ();
 				Object.DestroyImmediate(joint);
 				joint = null;
 				Object.Destroy(go, 15.0f);
