@@ -27,7 +27,7 @@ public class Arrowtest : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		var device = SteamVR_Controller.Input((int)arrow_controller.index);
-        Vector3 distance = right.position - left.position;
+        Vector3 distance = left.position - right.position;
         float length = distance.magnitude;
 		if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger) && length < 0.2f)
 		{
@@ -65,12 +65,17 @@ public class Arrowtest : MonoBehaviour {
 				var rigidbody = go.GetComponent<Rigidbody>();
 				Object.DestroyImmediate(joint);
 				joint = null;
-				Object.Destroy(go, 15.0f);
-				rigidbody.velocity = distance.normalized * _speed;
-				
-				//バイブレーション
-				device.TriggerHapticPulse(SHOT_VIVE_POW);
-				SteamVR_Controller.Input((int)bow_controller.index).TriggerHapticPulse(SHOT_VIVE_POW);
+				if ( length > 0.25f ) {
+					Object.Destroy(go, 10.0f);
+					rigidbody.velocity = distance.normalized * _speed;
+					go.AddComponent<Arrow> ();
+
+					//バイブレーション
+					device.TriggerHapticPulse(SHOT_VIVE_POW);
+					SteamVR_Controller.Input((int)bow_controller.index).TriggerHapticPulse(SHOT_VIVE_POW);
+				} else {
+					Object.Destroy(go);
+				}
 			}
 		} else {
 			_vive_length = 0;
