@@ -16,7 +16,7 @@ public class Arrowtest : MonoBehaviour {
 	const ushort DRAW_VIVE_POW = 1000;
 	const ushort SHOT_VIVE_POW = 3999;
 	float _vive_length = 0;
-	public float _before_length = 0;
+	float _before_length = 0;
 	const float VIVE_LENGTH = 0.1f;
 
 	// Use this for initialization
@@ -42,13 +42,7 @@ public class Arrowtest : MonoBehaviour {
 
 		if (joint)
 		{
-			Vector3 dir = Vector3.Cross(Vector3.up, distance).normalized;
-			float angle = Mathf.Acos(Vector3.Dot(Vector3.up, distance));
-			Quaternion q = Quaternion.AxisAngle(dir, angle);
-			Vector3 scale = new Vector3(0.1f, length * 0.5f, 0.1f);
-			
-			joint.transform.rotation = q;
-			joint.transform.localScale = scale;
+            joint.transform.rotation = Quaternion.LookRotation(distance.normalized);
 			joint.transform.position = ( left.position + right.position ) / 2;
 			
 			//バイブレーション
@@ -69,7 +63,6 @@ public class Arrowtest : MonoBehaviour {
 			{
 				var go = joint.gameObject;
 				var rigidbody = go.GetComponent<Rigidbody>();
-				go.AddComponent<Arrow> ();
 				Object.DestroyImmediate(joint);
 				joint = null;
 				Object.Destroy(go, 15.0f);
