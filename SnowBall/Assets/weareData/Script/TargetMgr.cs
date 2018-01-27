@@ -6,7 +6,7 @@ public class TargetMgr : MonoBehaviour {
 
 	[SerializeField] GameObject[] _wave;
 	int _wave_count;
-	int _hit_count;
+	public int _hit_count;
 
 	// Use this for initialization
 	void Start () {

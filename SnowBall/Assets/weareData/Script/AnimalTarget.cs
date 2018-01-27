@@ -11,7 +11,7 @@ public class AnimalTarget : MonoBehaviour {
 		_hit = false;
 	}
 
-	public void hit( ) {
+	void OnCollisionEnter( Collider collider ) {
 		if ( _hit ) {
 			return;
 		}
