@@ -36,6 +36,5 @@ public class SEPlayer : MonoBehaviour {
 			default        :							  print( "" );break;
 		}
 		audio.Play( );
-		audio.clip = null;
 	}
 }

@@ -45,3 +45,5 @@ SnowBall/Assets/Plugins/
 SnowBall/Assets/SAColliderBuilder/
 SnowBall/Assets/Plugins.meta
 SnowBall/Assets/SAColliderBuilder.meta
+SnowBall/Assets/sound/Script/NewComputeShader.compute
+SnowBall/Assets/sound/Script/NewComputeShader.compute.meta
