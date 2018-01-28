@@ -27,14 +27,20 @@ public class SEPlayer : MonoBehaviour {
 	private void OnCollisionEnter(Collision collision)
 	{
 		switch(collision.gameObject.tag) {
-			case "water"   : audio.clip = ArrowWater1;    print( "water" );break; //噴水
-			case "wood"    : audio.clip = Wood1;          print( "wood" );break; //木
-			case "good"    : audio.clip = HitGood1;       print( "good" );break; //的
-			case "floor"   : audio.clip = ArrowFallDown;  print( "floor" );break; //床
-			case "stone"   : audio.clip = HitStone;       print( "stone" );break; //石
-			case "concrete": audio.clip = HitConcrete;    print( "concrete" );break; //コンクリ
-			default        :							  print( "" );break;
+			case "water"   : audio.clip = ArrowWater1;    ;break; //噴水
+			case "wood"    : audio.clip = Wood1;          ;break; //木
+			case "good"    : audio.clip = HitGood1;       ;break; //的
+			case "floor"   : audio.clip = ArrowFallDown;  ;break; //床
+			case "stone"   : audio.clip = HitStone;       ;break; //石
+			case "concrete": audio.clip = HitConcrete;    ;break; //コンクリ
+			case "arrow"   : audio.clip = Wood2;          ;break; //弓矢
+			default        :							  ;break;
 		}
+		audio.Play( );
+	}
+
+	public void shot( ) {
+		audio.clip = ArrowShot;
 		audio.Play( );
 	}
 }

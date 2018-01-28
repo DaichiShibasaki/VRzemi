@@ -6,35 +6,107 @@ using UnityEngine.SceneManagement;
 public class GameMgr : MonoBehaviour {
 
 	enum GameStatus {
+		Title,
 		Start,
 		Game,
-		Clear,
-		Reset
+		Clear
 	};
-
-	[SerializeField] GameObject GET_TEXT;
+	[SerializeField] GameObject _op_sound;
+	[SerializeField] GameObject _title;
+	[SerializeField] TextMesh _timer;
 	[SerializeField] GameStatus _status;
-	[SerializeField] float GAME_TIME = 10;
+	[SerializeField] int GAME_TIME = 60;
+	[SerializeField] TargetMgr _target_mgr;
+	[SerializeField] TextMesh _result;
+	[TextArea(1, 3)][SerializeField] string[ ] _comment = new string[ 5 ];
 	float _game_time;
+	int _hit_num;
 
 	// Use this for initialization
 	void Start ( ) {
-		_status = GameStatus.Start;
+		_status = GameStatus.Title;
 		_game_time = 0;
+		_hit_num = 0;
 	}
 
 	private void Update( )
 	{
-		_status = GameStatus.Game;
-		GAME_TIME -= Time.deltaTime;
-		GET_TEXT.GetComponent<TextMesh>().text = ( ( int )GAME_TIME ).ToString( );
-		if( GAME_TIME < 1 ) {
-			_status = GameStatus.Clear;
-			GAME_TIME = 0.0f;
-		}
-		if( _status == GameStatus.Clear && Input.GetKey ( KeyCode.Return ) ) {
-			Debug.Log("NowLoading");
-			SceneManager.LoadScene(0);
-		}
+		updateGame( );
+		draw( );
 	}	
+
+	private void updateGame( ) {
+		switch ( _status ) {
+			case GameStatus.Title:
+				if( Input.GetKey( KeyCode.Return ) ) {
+					_status = GameStatus.Start;
+					Destroy(_title);
+					Destroy(_op_sound);
+					_result.text = "Game Start";
+				}
+				break;
+			case GameStatus.Start:
+				_game_time += Time.deltaTime;
+				if ( _game_time > 1 ) {
+					_result.text = "";
+					_status = GameStatus.Game;
+					_game_time = 0;
+				}
+				break;
+			case GameStatus.Game:
+				_game_time += Time.deltaTime;
+				if ( GAME_TIME - _game_time < -1 ) {
+					_timer.text = "";
+					_hit_num = _target_mgr.getHitCount( );
+					Destroy( _target_mgr );
+					_status = GameStatus.Clear;
+				}
+				break;
+			case GameStatus.Clear:
+				if( Input.GetKey( KeyCode.Return ) ) {
+					SceneManager.LoadScene(0);
+				}
+				break;
+		}
+	}
+
+	private void draw( ) {
+		switch ( _status ) {
+			case GameStatus.Title:
+				break;
+			case GameStatus.Start:
+				break;
+			case GameStatus.Game:
+				_timer.text = ( GAME_TIME - ( int )_game_time ).ToString( );
+				break;
+			case GameStatus.Clear:
+				drawResult( );
+				break;
+		}
+	}
+
+	private void drawResult( ) {
+		if ( _hit_num <= 3 ) {
+			_result.text = _comment[ 0 ];
+		}
+
+		if ( _hit_num >= 4 &&
+			 _hit_num <= 15 ) {
+			_result.text = _comment[ 1 ];
+		}
+
+		if ( _hit_num >= 16 &&
+			 _hit_num <= 30 ) {
+			_result.text = _comment[ 2 ];
+		}
+
+		if ( _hit_num >= 31 &&
+			 _hit_num <= 45 ) {
+			_result.text = _comment[ 3 ];
+		}
+
+		if ( _hit_num >= 46 ) {
+			_result.text = _comment[ 4 ];
+		}
+	}
 }

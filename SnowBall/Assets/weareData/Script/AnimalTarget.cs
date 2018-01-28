@@ -12,11 +12,15 @@ public class AnimalTarget : MonoBehaviour {
 	}
 
 	void OnCollisionEnter( Collision collision ) {
+		if ( collision.collider.tag != "arrow" ) {
+			return;
+		}
 		if ( _hit ) {
 			return;
 		}
 		Destroy( gameObject, 3f );
 		_target_mgr.GetComponent<TargetMgr>().Hitting( );
 		_hit = true;
+		gameObject.tag = "wood";
 	}
 }

@@ -66,13 +66,15 @@ public class Arrowtest : MonoBehaviour {
 				Object.DestroyImmediate(joint);
 				joint = null;
 				if ( length > 0.25f ) {
-					Object.Destroy(go, 10.0f);
+					Object.Destroy(go, 5.0f);
 					rigidbody.velocity = distance.normalized * _speed;
 					go.AddComponent<Arrow> ();
 
 					//バイブレーション
 					device.TriggerHapticPulse(SHOT_VIVE_POW);
 					SteamVR_Controller.Input((int)bow_controller.index).TriggerHapticPulse(SHOT_VIVE_POW);
+
+					go.GetComponent<SEPlayer>().shot( );
 				} else {
 					Object.Destroy(go);
 				}
