@@ -7,12 +7,15 @@ public class GameMgr : MonoBehaviour {
 
 	enum GameStatus {
 		Title,
+		Tutorial,
 		Start,
 		Game,
 		Clear
 	};
 	[SerializeField] GameObject _op_sound;
 	[SerializeField] GameObject _title;
+	[SerializeField] GameObject _tutorial_targets;
+	[SerializeField] GameObject _targets;
 	[SerializeField] TextMesh _timer;
 	[SerializeField] GameStatus _status;
 	[SerializeField] int GAME_TIME = 60;
@@ -38,10 +41,17 @@ public class GameMgr : MonoBehaviour {
 	private void updateGame( ) {
 		switch ( _status ) {
 			case GameStatus.Title:
-				if( Input.GetKey( KeyCode.Return ) ) {
-					_status = GameStatus.Start;
+				if( Input.GetKeyDown( KeyCode.Return ) ) {
+					_status = GameStatus.Tutorial;
 					Destroy(_title);
 					Destroy(_op_sound);
+				}
+				break;
+			case GameStatus.Tutorial:
+				if( Input.GetKeyDown( KeyCode.Return ) ) {
+					_status = GameStatus.Start;
+					Destroy( _tutorial_targets );
+					Instantiate( _targets );
 					_result.text = "Game Start";
 				}
 				break;
@@ -63,7 +73,7 @@ public class GameMgr : MonoBehaviour {
 				}
 				break;
 			case GameStatus.Clear:
-				if( Input.GetKey( KeyCode.Return ) ) {
+				if( Input.GetKeyDown( KeyCode.Return ) ) {
 					SceneManager.LoadScene(0);
 				}
 				break;
@@ -73,6 +83,8 @@ public class GameMgr : MonoBehaviour {
 	private void draw( ) {
 		switch ( _status ) {
 			case GameStatus.Title:
+				break;
+			case GameStatus.Tutorial:
 				break;
 			case GameStatus.Start:
 				break;
