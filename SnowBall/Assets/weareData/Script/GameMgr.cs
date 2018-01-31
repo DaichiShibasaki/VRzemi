@@ -24,6 +24,7 @@ public class GameMgr : MonoBehaviour {
 	[TextArea(1, 3)][SerializeField] string[ ] _comment = new string[ 5 ];
 	float _game_time;
 	int _hit_num;
+	GameObject _create_targets = null;
 
 	// Use this for initialization
 	void Start ( ) {
@@ -51,7 +52,7 @@ public class GameMgr : MonoBehaviour {
 				if( Input.GetKeyDown( KeyCode.Return ) ) {
 					_status = GameStatus.Start;
 					Destroy( _tutorial_targets );
-					Instantiate( _targets );
+					_create_targets = Instantiate( _targets );
 					_result.text = "Game Start";
 				}
 				break;
@@ -68,7 +69,7 @@ public class GameMgr : MonoBehaviour {
 				if ( GAME_TIME - _game_time < -1 ) {
 					_timer.text = "";
 					_hit_num = _target_mgr.getHitCount( );
-					Destroy( _target_mgr );
+					Destroy( _create_targets );
 					_status = GameStatus.Clear;
 				}
 				break;
